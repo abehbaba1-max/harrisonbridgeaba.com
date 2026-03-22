@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="Harrison Bridge ABA provides compassionate, evidence-based Applied Behavior Analysis therapy for children across North Carolina."/>
+<title>Harrison Bridge ABA | ABA Therapy | North Carolina</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --navy:#0D2137;
+  --navy2:#162E48;
+  --teal:#18B5AD;
+  --teal-d:#129A93;
+  --teal-p:#E6F7F6;
+  --teal-soft:#A8DEDD;
+  --gold:#D4943E;
+  --gold-p:#FDF5E8;
+  --gold-d:#B07830;
+  --sage:#4A7C6F;
+  --sage-p:#EAF3F0;
+  --warm:#FDF9F5;
+  --sand:#F4EDE3;
+  --cream:#FEFCF9;
+  --white:#fff;
+  --border:#E2EBF2;
+  --gray:#526070;
+  --gray-l:#8FA3B5;
+  --text:#192635;
+  --s1:0 2px 12px rgba(13,33,55,.06);
+  --s2:0 8px 32px rgba(13,33,55,.10);
+  --s3:0 20px 64px rgba(13,33,55,.14);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--cream);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+img{display:block;max-width:100%;}
+.page{display:none;}.page.active{display:block;}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:80px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;background:rgba(255,255,255,.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);box-shadow:var(--s1);}
+.nav-logo{display:flex;align-items:center;gap:13px;cursor:pointer;}
+.nav-logo-mark{display:flex;flex-direction:column;gap:3px;}
+.nav-logo-bar1{width:5px;height:28px;background:var(--teal);border-radius:3px;}
+.nav-logo-bar2{width:5px;height:14px;background:var(--gold);border-radius:3px;}
+.nav-logo-text .n1{font-family:'DM Serif Display',serif;font-size:18px;color:var(--navy);line-height:1.1;}
+.nav-logo-text .n2{font-size:9px;font-weight:600;letter-spacing:2.5px;color:var(--teal);text-transform:uppercase;margin-top:2px;}
+.nav-links{display:flex;align-items:center;gap:2px;list-style:none;}
+.nav-links a{font-size:13.5px;font-weight:500;color:var(--navy);padding:7px 12px;border-radius:8px;transition:all.2s;cursor:pointer;}
+.nav-links a:hover,.nav-links a.cur{background:var(--teal-p);color:var(--teal);}
+.nav-cta{background:var(--teal)!important;color:#fff!important;border-radius:50px!important;padding:10px 22px!important;font-weight:700!important;box-shadow:0 4px 14px rgba(24,181,173,.28)!important;}
+.nav-cta:hover{background:var(--teal-d)!important;transform:translateY(-1px);}
+.ham{display:none;background:none;border:none;cursor:pointer;}
+.mnav{display:none;position:fixed;top:80px;left:0;right:0;z-index:999;background:#fff;border-bottom:2px solid var(--border);padding:12px 5%;box-shadow:var(--s2);}
+.mnav.open{display:block;}
+.mnav a{display:block;font-size:15px;font-weight:500;color:var(--navy);padding:12px 0;border-bottom:1px solid var(--border);cursor:pointer;}
+.mnav a:last-child{color:var(--teal);font-weight:700;border:none;}
+
+/* MOBILE CALL */
+.mob-call{display:none;position:fixed;bottom:88px;right:18px;z-index:998;background:var(--teal);color:#fff;border:none;border-radius:50px;padding:12px 20px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;box-shadow:0 6px 24px rgba(24,181,173,.4);cursor:pointer;align-items:center;gap:8px;text-decoration:none;}
+@media(max-width:768px){.mob-call{display:flex;}}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;border-radius:50px;padding:14px 32px;transition:all.22s;cursor:pointer;border:none;text-decoration:none;line-height:1;}
+.btn-teal{background:var(--teal);color:#fff;box-shadow:0 4px 18px rgba(24,181,173,.24);}
+.btn-teal:hover{background:var(--teal-d);transform:translateY(-2px);box-shadow:0 8px 26px rgba(24,181,173,.36);}
+.btn-gold{background:var(--gold);color:#fff;box-shadow:0 4px 18px rgba(212,148,62,.24);}
+.btn-gold:hover{background:var(--gold-d);transform:translateY(-2px);}
+.btn-navy{background:var(--navy);color:#fff;}
+.btn-navy:hover{background:var(--navy2);transform:translateY(-2px);}
+.btn-outline{background:transparent;color:var(--navy);border:2px solid var(--border);padding:13px 28px;}
+.btn-outline:hover{border-color:var(--teal);color:var(--teal);}
+.btn-outline-w{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.3);padding:13px 28px;}
+.btn-outline-w:hover{border-color:#fff;background:rgba(255,255,255,.08);}
+.btn-sm{padding:10px 22px;font-size:13.5px;}
+
+/* SHARED */
+.ey{font-size:11px;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:var(--teal);margin-bottom:12px;}
+.h1{font-family:'DM Serif Display',serif;font-size:clamp(36px,5.5vw,66px);line-height:1.07;color:var(--navy);}
+.h2{font-family:'DM Serif Display',serif;font-size:clamp(26px,4vw,46px);line-height:1.15;color:var(--navy);}
+.h3{font-family:'DM Serif Display',serif;font-size:clamp(19px,2.5vw,26px);color:var(--navy);}
+.lead{font-size:17px;line-height:1.88;color:var(--gray);font-weight:300;}
+.si{max-width:1200px;margin:0 auto;}
+.s{padding:96px 5%;}
+.bg-warm{background:var(--warm);}
+.bg-sand{background:var(--sand);}
+.bg-cream{background:var(--cream);}
+.bg-navy{background:var(--navy);}
+.bg-white{background:#fff;}
+
+/* HERO */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;min-height:100vh;padding-top:80px;}
+.hero-l{background:linear-gradient(158deg,#060f18 0%,#0D2137 45%,#122840 100%);display:flex;align-items:center;padding:80px 5% 80px 6%;position:relative;overflow:hidden;}
+.hero-l::before{content:'';position:absolute;top:-200px;right:-100px;width:700px;height:700px;background:radial-gradient(circle,rgba(24,181,173,.09) 0%,transparent 62%);pointer-events:none;}
+.hero-l::after{content:'';position:absolute;bottom:-100px;left:-50px;width:400px;height:400px;background:radial-gradient(circle,rgba(212,148,62,.06) 0%,transparent 60%);pointer-events:none;}
+.hero-content{position:relative;z-index:1;max-width:560px;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(24,181,173,.13);border:1px solid rgba(24,181,173,.22);border-radius:50px;padding:7px 18px;font-size:11.5px;font-weight:600;letter-spacing:1.5px;color:var(--teal-soft);text-transform:uppercase;margin-bottom:28px;}
+.hero h1{font-family:'DM Serif Display',serif;font-size:clamp(36px,5vw,62px);line-height:1.07;color:#fff;margin-bottom:22px;}
+.hero h1 em{color:var(--teal-soft);font-style:normal;}
+.hero-desc{font-size:18px;line-height:1.85;color:rgba(255,255,255,.6);margin-bottom:40px;font-weight:300;}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:48px;}
+.hero-proof{display:flex;gap:8px;flex-wrap:wrap;}
+.proof-chip{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.11);border-radius:50px;padding:7px 15px;font-size:12px;color:rgba(255,255,255,.5);font-weight:500;}
+.hero-r{position:relative;overflow:hidden;}
+.hero-r img{width:100%;height:100%;object-fit:cover;object-position:center 20%;}
+.hero-r::before{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(13,33,55,.55) 0%,rgba(13,33,55,.05) 55%,transparent 100%);z-index:1;}
+.hero-card{position:absolute;bottom:32px;left:22px;right:22px;z-index:2;background:rgba(255,255,255,.95);backdrop-filter:blur(16px);border-radius:16px;padding:18px 22px;box-shadow:var(--s3);}
+.hc-stars{color:var(--gold);font-size:13px;letter-spacing:2px;margin-bottom:7px;}
+.hc-text{font-family:'DM Serif Display',serif;font-size:15px;color:var(--navy);line-height:1.5;margin-bottom:5px;}
+.hc-by{font-size:12px;color:var(--gray);font-weight:500;}
+.hero-tag{position:absolute;top:28px;right:22px;z-index:2;background:var(--teal);border-radius:12px;padding:16px 20px;text-align:center;box-shadow:0 6px 24px rgba(24,181,173,.4);}
+.ht-n{font-family:'DM Serif Display',serif;font-size:20px;color:#fff;line-height:1.1;}
+.ht-l{font-size:11px;color:rgba(255,255,255,.72);font-weight:500;margin-top:3px;}
+
+/* TRUST BAR */
+.trust{background:var(--navy);padding:18px 5%;}
+.trust-inner{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 40px;}
+.ti{display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:500;color:rgba(255,255,255,.5);}
+.ti-dot{width:5px;height:5px;border-radius:50%;background:var(--teal);flex-shrink:0;}
+.ti-bar{width:1px;height:16px;background:rgba(255,255,255,.12);}
+
+/* EMOTION SECTION */
+.emotion{background:var(--cream);padding:80px 5%;}
+.emotion-inner{max-width:780px;margin:0 auto;text-align:center;}
+.emotion h2{font-family:'DM Serif Display',serif;font-size:clamp(24px,3.5vw,40px);color:var(--navy);line-height:1.25;margin-bottom:20px;}
+.emotion p{font-size:17px;color:var(--gray);line-height:1.9;margin-bottom:14px;font-weight:300;}
+
+/* ABOUT SPLIT */
+.about-split{display:grid;grid-template-columns:1fr 1fr;min-height:560px;}
+.about-photo{position:relative;overflow:hidden;}
+.about-photo img{width:100%;height:100%;object-fit:cover;}
+.about-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,transparent 52%,var(--warm) 100%);}
+.about-text{background:var(--warm);padding:72px 60px 72px 52px;display:flex;flex-direction:column;justify-content:center;}
+.about-text p{font-size:16px;color:var(--gray);line-height:1.9;margin-bottom:16px;font-weight:300;}
+.vpills{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px;}
+.vpill{background:#fff;border:1.5px solid var(--border);border-radius:50px;padding:8px 16px;font-size:13px;font-weight:600;color:var(--navy);display:flex;align-items:center;gap:7px;}
+.vp-dot{width:6px;height:6px;border-radius:50%;background:var(--teal);flex-shrink:0;}
+
+/* HOW IT WORKS — Golden Steps style */
+.steps-section{background:var(--navy);padding:96px 5%;}
+.steps-section .ey{color:#D4C27A;}
+.steps-section .h2{color:#fff;}
+.steps-section .lead{color:rgba(255,255,255,.48);}
+.steps-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:60px;position:relative;}
+.steps-grid::before{content:'';position:absolute;top:36px;left:10%;right:10%;height:2px;background:linear-gradient(to right,rgba(24,181,173,.5),rgba(24,181,173,.1));z-index:0;}
+.step-item{text-align:center;position:relative;z-index:1;padding:0 8px;}
+.step-circle{width:72px;height:72px;border-radius:50%;background:rgba(24,181,173,.1);border:2.5px solid rgba(24,181,173,.3);display:grid;place-items:center;font-family:'DM Serif Display',serif;font-size:26px;color:var(--teal-soft);margin:0 auto 20px;}
+.step-item h4{font-size:14px;font-weight:700;color:#fff;margin-bottom:8px;line-height:1.3;}
+.step-item p{font-size:12.5px;color:rgba(255,255,255,.42);line-height:1.7;font-weight:300;}
+
+/* SERVICE CARDS */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px;}
+.sc{background:#fff;border:1.5px solid var(--border);border-radius:20px;overflow:hidden;transition:all.3s;cursor:pointer;}
+.sc:hover{transform:translateY(-5px);box-shadow:var(--s3);border-color:var(--teal);}
+.sc-img{height:200px;overflow:hidden;position:relative;}
+.sc-img img{width:100%;height:100%;object-fit:cover;transition:transform.4s;}
+.sc:hover .sc-img img{transform:scale(1.06);}
+.sc-img-tag{position:absolute;top:14px;left:14px;background:rgba(13,33,55,.75);backdrop-filter:blur(8px);color:#fff;font-size:11px;font-weight:700;letter-spacing:.8px;padding:5px 12px;border-radius:20px;text-transform:uppercase;}
+.sc-body{padding:22px 24px;}
+.sc-body h3{font-family:'DM Serif Display',serif;font-size:18px;color:var(--navy);margin-bottom:8px;}
+.sc-body p{font-size:13.5px;color:var(--gray);line-height:1.75;font-weight:300;}
+.sc-link{display:inline-flex;align-items:center;gap:5px;color:var(--teal);font-size:13px;font-weight:600;margin-top:12px;transition:gap.18s;}
+.sc:hover .sc-link{gap:9px;}
+
+/* TESTIMONIALS */
+.tband{position:relative;}
+.tband-img{width:100%;height:520px;object-fit:cover;object-position:center 25%;display:block;}
+.tband-ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(13,33,55,.7),rgba(13,33,55,.88));}
+.tband-cnt{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 5%;}
+.t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;width:100%;max-width:1200px;margin-top:32px;}
+.tc{background:rgba(255,255,255,.08);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:26px;}
+.tc-stars{color:var(--gold);font-size:13px;letter-spacing:2px;margin-bottom:10px;}
+.tc p{font-size:14px;color:rgba(255,255,255,.82);line-height:1.78;font-style:italic;margin-bottom:14px;font-weight:300;}
+.tc-author{display:flex;align-items:center;gap:11px;}
+.tc-av{width:42px;height:42px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(255,255,255,.2);}
+.tc-name{font-size:13px;font-weight:700;color:#fff;}
+.tc-loc{font-size:11.5px;color:rgba(255,255,255,.4);}
+
+/* STATS */
+.stat-band{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-d) 100%);padding:64px 5%;}
+.stat-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:rgba(255,255,255,.1);border-radius:14px;overflow:hidden;}
+.stat-box{background:rgba(255,255,255,.05);padding:40px 20px;text-align:center;}
+.stat-n{font-family:'DM Serif Display',serif;font-size:48px;color:#fff;line-height:1;}
+.stat-l{font-size:13px;color:rgba(255,255,255,.6);margin-top:7px;font-weight:500;}
+
+/* INSURANCE */
+.ins-wrap{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
+.ins-list{list-style:none;margin-top:16px;}
+.ins-row{display:flex;align-items:center;gap:13px;padding:14px 0;border-bottom:1px solid var(--border);font-size:15px;font-weight:600;color:var(--navy);}
+.ins-row:last-child{border-bottom:none;}
+.ins-chk{width:26px;height:26px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-size:12px;flex-shrink:0;}
+.ins-photo{border-radius:20px;overflow:hidden;box-shadow:var(--s3);}
+.ins-photo img{width:100%;height:360px;object-fit:cover;display:block;}
+.ins-cap{background:var(--navy);padding:24px 28px;}
+.ins-cap h4{font-family:'DM Serif Display',serif;font-size:19px;color:#fff;margin-bottom:7px;}
+.ins-cap p{font-size:13.5px;color:rgba(255,255,255,.58);line-height:1.7;margin-bottom:16px;font-weight:300;}
+
+/* CTA */
+.cta{background:linear-gradient(150deg,#060f18 0%,#0D2137 55%,#122840 100%);padding:88px 5%;text-align:center;position:relative;overflow:hidden;}
+.cta::before{content:'';position:absolute;top:-100px;right:-80px;width:500px;height:500px;background:radial-gradient(circle,rgba(24,181,173,.08) 0%,transparent 60%);pointer-events:none;}
+.cta .h2{color:#fff;margin-bottom:14px;}
+.cta .lead{color:rgba(255,255,255,.5);max-width:520px;margin:0 auto 36px;}
+.cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+
+/* PAGE HERO */
+.ph{background:var(--warm);padding:144px 5% 80px;}
+.ph-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+.ph h1{font-family:'DM Serif Display',serif;font-size:clamp(30px,4.5vw,52px);color:var(--navy);margin-bottom:14px;line-height:1.1;}
+.ph p{font-size:17px;color:var(--gray);line-height:1.82;font-weight:300;}
+.ph-img{border-radius:18px;overflow:hidden;box-shadow:var(--s3);}
+.ph-img img{width:100%;height:290px;object-fit:cover;display:block;}
+
+/* SERVICES FULL PAGE */
+.svc-full-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.sf{background:#fff;border:1.5px solid var(--border);border-radius:20px;overflow:hidden;transition:all.3s;}
+.sf:hover{border-color:var(--teal);box-shadow:var(--s3);}
+.sf-img{height:210px;overflow:hidden;position:relative;}
+.sf-img img{width:100%;height:100%;object-fit:cover;transition:transform.4s;}
+.sf:hover .sf-img img{transform:scale(1.04);}
+.sf-img-tag{position:absolute;bottom:14px;left:14px;background:var(--teal);color:#fff;font-size:11px;font-weight:700;letter-spacing:.8px;padding:5px 12px;border-radius:20px;text-transform:uppercase;}
+.sf-body{padding:26px 28px;}
+.sf-body h3{font-family:'DM Serif Display',serif;font-size:20px;color:var(--navy);margin-bottom:10px;}
+.sf-body p{font-size:14px;color:var(--gray);line-height:1.82;font-weight:300;}
+
+/* VALUES / ABOUT PAGE */
+.vals-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:38px;}
+.vcard{background:#fff;border:1.5px solid var(--border);border-radius:18px;padding:28px;transition:all.25s;}
+.vcard:hover{border-color:var(--teal);box-shadow:var(--s2);}
+.vnum{font-family:'DM Serif Display',serif;font-size:42px;color:var(--teal-p);line-height:1;margin-bottom:12px;}
+.vcard h4{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:7px;}
+.vcard p{font-size:13.5px;color:var(--gray);line-height:1.8;font-weight:300;}
+.mission{background:var(--navy);border-radius:22px;padding:60px;position:relative;overflow:hidden;margin-bottom:52px;}
+.mission::after{content:'';position:absolute;bottom:-60px;right:-60px;width:280px;height:280px;background:radial-gradient(circle,rgba(24,181,173,.12) 0%,transparent 65%);}
+.mission h2{font-family:'DM Serif Display',serif;font-size:34px;color:#fff;margin-bottom:14px;position:relative;z-index:1;}
+.mission p{font-size:16.5px;color:rgba(255,255,255,.62);max-width:660px;line-height:1.88;position:relative;z-index:1;font-weight:300;}
+
+/* LOCATIONS */
+.loc-map{background:linear-gradient(145deg,var(--navy),#1a4560);border-radius:22px;padding:52px;margin-bottom:48px;position:relative;overflow:hidden;}
+.loc-map::after{content:'';position:absolute;top:-60px;right:-60px;width:260px;height:260px;background:radial-gradient(circle,rgba(24,181,173,.14) 0%,transparent 65%);}
+.loc-map h2{font-family:'DM Serif Display',serif;font-size:34px;color:#fff;margin-bottom:12px;position:relative;z-index:1;}
+.loc-map p{font-size:16px;color:rgba(255,255,255,.6);max-width:580px;line-height:1.85;position:relative;z-index:1;font-weight:300;margin-bottom:26px;}
+.cities-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:32px;}
+.city{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:7px;padding:9px 13px;font-size:12.5px;color:rgba(255,255,255,.68);font-weight:500;text-align:center;}
+.loc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+.lc{background:#fff;border:1.5px solid var(--border);border-radius:18px;overflow:hidden;transition:all.25s;}
+.lc:hover{border-color:var(--teal);box-shadow:var(--s2);}
+.lc-img{height:170px;overflow:hidden;}
+.lc-img img{width:100%;height:100%;object-fit:cover;}
+.lc-body{padding:20px 22px;}
+.lc-body h3{font-family:'DM Serif Display',serif;font-size:17px;color:var(--navy);margin-bottom:6px;}
+.lc-body p{font-size:13.5px;color:var(--gray);line-height:1.78;font-weight:300;}
+
+/* INSURANCE PAGE */
+.ins-page{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start;}
+.pcard{background:#fff;border:1.5px solid var(--border);border-radius:20px;padding:34px;box-shadow:var(--s1);}
+.pcard h3{font-family:'DM Serif Display',serif;font-size:21px;color:var(--navy);margin-bottom:22px;}
+.prow{display:flex;align-items:center;gap:14px;padding:15px 0;border-bottom:1px solid var(--border);}
+.prow:last-child{border-bottom:none;}
+.pb{width:34px;height:34px;border-radius:8px;background:var(--navy);display:grid;place-items:center;color:#fff;font-size:11.5px;font-weight:800;flex-shrink:0;}
+.pr-h{font-size:15px;font-weight:600;color:var(--navy);}
+.pr-p{font-size:12px;color:var(--gray);font-weight:300;}
+.ps{margin-left:auto;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;white-space:nowrap;}
+.ps-a{background:var(--teal-p);color:var(--teal-d);}
+.ps-p{background:#fffbea;color:#9a7000;}
+.ins-stack{display:flex;flex-direction:column;gap:18px;}
+.isc{background:#fff;border:1.5px solid var(--border);border-radius:18px;overflow:hidden;}
+.isc-img{height:165px;overflow:hidden;}
+.isc-img img{width:100%;height:100%;object-fit:cover;display:block;}
+.isc-body{padding:22px 24px;}
+.isc-body h3{font-family:'DM Serif Display',serif;font-size:18px;color:var(--navy);margin-bottom:8px;}
+.isc-body p{font-size:13.5px;color:var(--gray);line-height:1.8;margin-bottom:14px;font-weight:300;}
+
+/* CAREERS */
+.car-split{display:grid;grid-template-columns:1fr 1fr;min-height:500px;}
+.car-photo{overflow:hidden;}
+.car-photo img{width:100%;height:100%;object-fit:cover;}
+.car-txt{background:var(--sand);padding:68px 56px;display:flex;flex-direction:column;justify-content:center;}
+.car-txt p{font-size:16px;color:var(--gray);line-height:1.9;margin-bottom:20px;font-weight:300;}
+.pos-list{display:flex;flex-direction:column;gap:10px;margin-top:22px;}
+.pos{background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;transition:all.2s;}
+.pos:hover{border-color:var(--teal);box-shadow:var(--s2);}
+.pos h4{font-size:14.5px;font-weight:700;color:var(--navy);margin-bottom:5px;}
+.pos-tags{display:flex;gap:6px;flex-wrap:wrap;}
+.tag{font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:20px;}
+.tag-t{background:var(--teal-p);color:var(--teal-d);}
+.tag-g{background:var(--gold-p);color:var(--gold-d);}
+.tag-n{background:#f0f4f7;color:var(--navy);}
+.pos-btn{background:var(--navy);color:#fff;padding:8px 16px;border-radius:8px;font-size:12.5px;font-weight:700;text-decoration:none;white-space:nowrap;transition:background.2s;flex-shrink:0;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;}
+.pos-btn:hover{background:var(--teal);}
+.perks-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px;}
+.perk{background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:24px;transition:all.25s;}
+.perk:hover{border-color:var(--gold);box-shadow:var(--s2);}
+.perk-ico{font-size:24px;margin-bottom:10px;}
+.perk h4{font-size:14.5px;font-weight:700;color:var(--navy);margin-bottom:6px;}
+.perk p{font-size:13px;color:var(--gray);line-height:1.7;font-weight:300;}
+
+/* BLOG */
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px;}
+.blog-card{background:#fff;border:1.5px solid var(--border);border-radius:18px;overflow:hidden;transition:all.3s;}
+.blog-card:hover{transform:translateY(-4px);box-shadow:var(--s3);border-color:var(--teal);}
+.blog-img{height:185px;overflow:hidden;}
+.blog-img img{width:100%;height:100%;object-fit:cover;transition:transform.4s;}
+.blog-card:hover .blog-img img{transform:scale(1.05);}
+.blog-body{padding:20px 22px;}
+.blog-cat{display:inline-block;background:var(--gold-p);color:var(--gold-d);font-size:10.5px;font-weight:700;letter-spacing:1px;padding:4px 11px;border-radius:20px;margin-bottom:9px;text-transform:uppercase;}
+.blog-body h3{font-family:'DM Serif Display',serif;font-size:17px;color:var(--navy);margin-bottom:7px;line-height:1.3;}
+.blog-body p{font-size:13px;color:var(--gray);line-height:1.72;font-weight:300;}
+.blog-date{font-size:12px;color:var(--gray-l);margin-top:10px;font-weight:500;}
+
+/* FAQ */
+.faq-list{max-width:780px;margin:36px auto 0;}
+.faq-item{border-bottom:1px solid var(--border);}
+.faq-q{width:100%;text-align:left;background:none;border:none;padding:20px 0;display:flex;align-items:center;justify-content:space-between;gap:20px;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;color:var(--navy);transition:color.2s;}
+.faq-q:hover{color:var(--teal);}
+.faq-ico{width:26px;height:26px;border-radius:50%;background:var(--teal-p);display:grid;place-items:center;flex-shrink:0;font-size:16px;color:var(--teal);transition:all.2s;}
+.faq-a{max-height:0;overflow:hidden;transition:max-height.4s ease;}
+.faq-a p{font-size:15px;color:var(--gray);line-height:1.85;padding-bottom:18px;font-weight:300;}
+.faq-item.open .faq-a{max-height:400px;}
+.faq-item.open .faq-ico{background:var(--teal);color:#fff;transform:rotate(45deg);}
+
+/* CONTACT + INTAKE */
+.contact-grid{display:grid;grid-template-columns:1fr 1.45fr;gap:56px;align-items:start;}
+.ci h3{font-family:'DM Serif Display',serif;font-size:22px;color:var(--navy);margin-bottom:12px;}
+.ci p{font-size:15px;color:var(--gray);line-height:1.88;margin-bottom:22px;font-weight:300;}
+.ci-row{display:flex;align-items:flex-start;gap:12px;margin-bottom:15px;}
+.ci-ico{width:40px;height:40px;background:var(--teal-p);border-radius:9px;display:grid;place-items:center;flex-shrink:0;font-size:16px;}
+.ci-t strong{display:block;font-size:11px;font-weight:700;color:var(--navy);letter-spacing:.5px;text-transform:uppercase;margin-bottom:1px;}
+.ci-t a,.ci-t span{font-size:14px;color:var(--gray);font-weight:300;text-decoration:none;}
+.ci-t a{color:var(--teal);font-weight:600;}
+.ci-photo{border-radius:16px;overflow:hidden;margin-top:22px;}
+.ci-photo img{width:100%;height:200px;object-fit:cover;display:block;}
+.nxt{background:var(--warm);border-radius:13px;padding:22px;margin-top:18px;}
+.nxt h4{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:12px;}
+.nr{display:flex;align-items:flex-start;gap:10px;margin-bottom:11px;}
+.nr:last-child{margin-bottom:0;}
+.nr-n{width:26px;height:26px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:12px;font-weight:700;flex-shrink:0;}
+.nr-t strong{display:block;font-size:13px;font-weight:600;color:var(--navy);}
+.nr-t span{font-size:12px;color:var(--gray);font-weight:300;}
+.fbox{background:#fff;border-radius:22px;padding:42px;border:1.5px solid var(--border);box-shadow:var(--s3);}
+.fbox h3{font-family:'DM Serif Display',serif;font-size:24px;color:var(--navy);margin-bottom:5px;}
+.fbox .sub{font-size:13.5px;color:var(--gray);margin-bottom:28px;font-weight:300;}
+.fg{margin-bottom:14px;}
+.fg label{display:block;font-size:10.5px;font-weight:700;color:var(--navy);letter-spacing:.5px;text-transform:uppercase;margin-bottom:6px;}
+.fg input,.fg select{width:100%;padding:13px 15px;border-radius:10px;border:1.5px solid var(--border);background:#fff;font-family:'DM Sans',sans-serif;font-size:14.5px;color:var(--text);outline:none;transition:border-color.2s,box-shadow.2s;-webkit-appearance:none;font-weight:400;}
+.fg input:focus,.fg select:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(24,181,173,.1);}
+.or-line{display:flex;align-items:center;gap:14px;margin:20px 0;}
+.or-line::before,.or-line::after{content:'';flex:1;height:1px;background:var(--border);}
+.or-line span{font-size:12.5px;color:var(--gray-l);font-weight:500;}
+.call-big{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;background:var(--navy);color:#fff;padding:14px;border-radius:50px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;text-decoration:none;transition:all.22s;}
+.call-big:hover{background:var(--teal);}
+.fsub{width:100%;background:var(--teal);color:#fff;padding:15px;border:none;border-radius:50px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:all.22s;margin-top:16px;}
+.fsub:hover{background:var(--teal-d);box-shadow:0 6px 22px rgba(24,181,173,.3);}
+.form-ok{display:none;background:var(--teal-p);border:1.5px solid var(--teal);border-radius:14px;padding:24px;text-align:center;margin-top:16px;}
+.form-ok h4{font-family:'DM Serif Display',serif;font-size:21px;color:var(--navy);margin-bottom:7px;}
+.form-ok p{font-size:14px;color:var(--gray);font-weight:300;}
+
+/* CHATBOT */
+.chat-bubble{position:fixed;bottom:24px;right:24px;z-index:9999;}
+.chat-toggle{width:58px;height:58px;border-radius:50%;background:var(--teal);border:none;cursor:pointer;display:grid;place-items:center;box-shadow:0 6px 24px rgba(24,181,173,.4);transition:all.2s;}
+.chat-toggle:hover{background:var(--teal-d);transform:scale(1.07);}
+.chat-win{position:absolute;bottom:68px;right:0;width:330px;background:#fff;border-radius:20px;box-shadow:0 14px 52px rgba(13,33,55,.18);border:1px solid var(--border);overflow:hidden;display:none;flex-direction:column;}
+.chat-win.open{display:flex;}
+.chat-head{background:var(--navy);padding:16px 18px;display:flex;align-items:center;gap:12px;}
+.cha-av{width:38px;height:38px;border-radius:50%;background:var(--teal);display:grid;place-items:center;flex-shrink:0;font-size:17px;}
+.cha-nm{font-size:14px;font-weight:700;color:#fff;}
+.cha-st{font-size:11px;color:rgba(255,255,255,.5);}
+.chat-msgs{flex:1;padding:14px;max-height:280px;overflow-y:auto;display:flex;flex-direction:column;gap:9px;}
+.msg{max-width:85%;padding:10px 13px;border-radius:13px;font-size:13px;line-height:1.6;}
+.msg-b{background:var(--warm);color:var(--text);border-bottom-left-radius:3px;align-self:flex-start;font-weight:300;}
+.msg-u{background:var(--teal);color:#fff;border-bottom-right-radius:3px;align-self:flex-end;}
+.qrs{display:flex;flex-wrap:wrap;gap:5px;padding:0 13px 11px;}
+.qr{background:var(--teal-p);color:var(--teal-d);border:none;border-radius:50px;padding:5px 12px;font-size:12px;font-weight:600;cursor:pointer;transition:all.2s;font-family:'DM Sans',sans-serif;}
+.qr:hover{background:var(--teal);color:#fff;}
+.chat-in-row{display:flex;gap:7px;padding:10px 13px;border-top:1px solid var(--border);}
+.chat-in{flex:1;border:1.5px solid var(--border);border-radius:50px;padding:8px 14px;font-family:'DM Sans',sans-serif;font-size:13px;outline:none;font-weight:300;}
+.chat-in:focus{border-color:var(--teal);}
+.chat-send{background:var(--teal);border:none;border-radius:50%;width:34px;height:34px;display:grid;place-items:center;cursor:pointer;flex-shrink:0;}
+.chat-send:hover{background:var(--teal-d);}
+
+/* FOOTER */
+footer{background:#070f19;padding:68px 5% 32px;}
+.ft{max-width:1200px;margin:0 auto;}
+.ft-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}
+.ft-desc{font-size:13.5px;color:rgba(255,255,255,.33);line-height:1.88;margin-top:14px;max-width:270px;font-weight:300;}
+.ft-col h5{font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:14px;}
+.ft-col ul{list-style:none;}
+.ft-col li{margin-bottom:10px;}
+.ft-col a{color:rgba(255,255,255,.44);font-size:13.5px;font-weight:300;transition:color.2s;cursor:pointer;text-decoration:none;}
+.ft-col a:hover{color:var(--teal);}
+.ft-rule{height:1px;background:rgba(255,255,255,.05);margin-bottom:22px;}
+.ft-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;align-items:center;}
+.ft-bot p{font-size:12px;color:rgba(255,255,255,.22);font-weight:300;}
+.ft-badges{display:flex;gap:8px;}
+.ft-badge{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:6px;padding:4px 10px;font-size:10px;font-weight:600;color:rgba(255,255,255,.36);letter-spacing:.5px;}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(22px);transition:opacity.62s ease,transform.62s ease;}
+.rv.on{opacity:1;transform:none;}
+.d1{transition-delay:.1s;}.d2{transition-delay:.2s;}.d3{transition-delay:.3s;}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .hero,.about-split,.car-split{grid-template-columns:1fr;}
+  .hero-r{height:400px;}.about-photo{min-height:300px;}.car-photo{min-height:260px;}
+  .ph-inner,.ins-wrap,.ins-page,.contact-grid{grid-template-columns:1fr;gap:32px;}
+  .ph-img{display:none;}
+  .svc-grid,.svc-full-grid,.loc-grid,.t-grid,.vals-grid,.blog-grid,.perks-grid{grid-template-columns:1fr 1fr;}
+  .steps-grid{grid-template-columns:1fr 1fr;}.steps-grid::before{display:none;}
+  .stat-grid{grid-template-columns:1fr 1fr;}
+  .ft-top{grid-template-columns:1fr 1fr;gap:28px;}
+  .cities-grid{grid-template-columns:repeat(3,1fr);}
+  .nav-links{display:none;}.ham{display:block;}
+}
+@media(max-width:640px){
+  .svc-grid,.svc-full-grid,.loc-grid,.t-grid,.vals-grid,.blog-grid,.perks-grid,.steps-grid,.stat-grid,.cities-grid{grid-template-columns:1fr;}
+  .ft-top{grid-template-columns:1fr;}
+  .hero-l,.about-text,.car-txt{padding:52px 5%;}
+  .mission,.ph{padding:40px 5%;}
+  .pos{flex-direction:column;align-items:flex-start;}
+  .chat-win{width:295px;}
+  .s{padding:68px 4%;}
+}
+</style>
+</head>
+<body>
+
+<!-- MOBILE CALL BUTTON -->
+<a class="mob-call" href="tel:+17047095688">
+  <svg width="16" height="16" fill="none" stroke="white" stroke-width="2.2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.58 1.25h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  Call Us Now
+</a>
+
+<!-- NAV -->
+<nav class="nav" id="mainNav">
+  <div class="nav-logo" onclick="gp('home')">
+    <div class="nav-logo-mark"><div class="nav-logo-bar1"></div><div class="nav-logo-bar2"></div></div>
+    <div class="nav-logo-text"><div class="n1">Harrison Bridge</div><div class="n2">Applied Behavior Analysis</div></div>
+  </div>
+  <ul class="nav-links" id="navL">
+    <li><a onclick="gp('home')" data-p="home">Home</a></li>
+    <li><a onclick="gp('about')" data-p="about">About</a></li>
+    <li><a onclick="gp('services')" data-p="services">Services</a></li>
+    <li><a onclick="gp('locations')" data-p="locations">Locations</a></li>
+    <li><a onclick="gp('insurance')" data-p="insurance">Insurance</a></li>
+    <li><a onclick="gp('careers')" data-p="careers">Careers</a></li>
+    <li><a onclick="gp('resources')" data-p="resources">Resources</a></li>
+    <li><a onclick="gp('faq')" data-p="faq">FAQ</a></li>
+    <li><a onclick="gp('intake')" data-p="intake" class="nav-cta">Get Started</a></li>
+  </ul>
+  <button class="ham" onclick="tmn()">
+    <svg width="24" height="24" fill="none" stroke="#0D2137" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</nav>
+<div class="mnav" id="mnav">
+  <a onclick="gp('home');tmn()">Home</a>
+  <a onclick="gp('about');tmn()">About</a>
+  <a onclick="gp('services');tmn()">Services</a>
+  <a onclick="gp('locations');tmn()">Locations</a>
+  <a onclick="gp('insurance');tmn()">Insurance</a>
+  <a onclick="gp('careers');tmn()">Careers</a>
+  <a onclick="gp('resources');tmn()">Resources</a>
+  <a onclick="gp('faq');tmn()">FAQ</a>
+  <a onclick="gp('intake');tmn()">Get Started →</a>
+</div>
+
+<!-- AI CHATBOT -->
+<div class="chat-bubble">
+  <div class="chat-win" id="chatWin">
+    <div class="chat-head">
+      <div class="cha-av">👋</div>
+      <div><div class="cha-nm">Harrison Bridge Support</div><div class="cha-st">Typically replies right away</div></div>
+    </div>
+    <div class="chat-msgs" id="chatMsgs">
+      <div class="msg msg-b">Hi! I'm here to help you learn about Harrison Bridge ABA and whether our services might be right for your family. What can I help you with?</div>
+    </div>
+    <div class="qrs" id="qrs">
+      <button class="qr" onclick="qr('What is ABA therapy?')">What is ABA?</button>
+      <button class="qr" onclick="qr('Does insurance cover ABA?')">Insurance?</button>
+      <button class="qr" onclick="qr('How do I get started?')">Get started</button>
+      <button class="qr" onclick="qr('What ages do you serve?')">Ages served</button>
+    </div>
+    <div class="chat-in-row">
+      <input class="chat-in" id="chatIn" placeholder="Type a message..." onkeydown="if(event.key==='Enter')sendMsg()"/>
+      <button class="chat-send" onclick="sendMsg()"><svg fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" viewBox="0 0 24 24" width="15" height="15"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>
+    </div>
+  </div>
+  <button class="chat-toggle" onclick="toggleChat()">
+    <svg fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" viewBox="0 0 24 24" width="24" height="24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </button>
+</div>
+
+<!-- ════════ HOME ════════ -->
+<div class="page active" id="page-home">
+  <div class="hero">
+    <div class="hero-l">
+      <div class="hero-content">
+        <div class="hero-badge">North Carolina's ABA Provider</div>
+        <h1>Every child deserves a <em>bridge</em> to their fullest potential.</h1>
+        <p class="hero-desc">Harrison Bridge ABA brings compassionate, evidence-based Applied Behavior Analysis therapy directly to children across North Carolina — in the home, school, and community environments that matter most.</p>
+        <div class="hero-btns">
+          <a class="btn btn-teal" onclick="gp('intake')">Get Started — It's Free</a>
+          <a class="btn btn-outline-w" href="tel:+17047095688">Call <strong>(704) 709-5688</strong></a>
+        </div>
+        <div class="hero-proof">
+          <span class="proof-chip">Insurance Accepted</span>
+          <span class="proof-chip">BCBA-Led</span>
+          <span class="proof-chip">Ages 2–12</span>
+          <span class="proof-chip">All of NC</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-r">
+      <!-- Real ABA therapy session photo - therapist working with child -->
+      <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=900&q=85&fit=crop" alt="ABA therapist working with child"/>
+      <div class="hero-tag"><div class="ht-n">Ages<br/>2–12</div><div class="ht-l">Serving NC Families</div></div>
+      <div class="hero-card">
+        <div class="hc-stars">★★★★★</div>
+        <div class="hc-text">"For the first time, I felt like someone truly understood our son."</div>
+        <div class="hc-by">— NC Parent, Harrison Bridge ABA</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="trust"><div class="trust-inner">
+    <div class="ti"><span class="ti-dot"></span>Insurance Accepted</div>
+    <div class="ti-bar"></div>
+    <div class="ti"><span class="ti-dot"></span>In-Home Therapy</div>
+    <div class="ti-bar"></div>
+    <div class="ti"><span class="ti-dot"></span>School-Based</div>
+    <div class="ti-bar"></div>
+    <div class="ti"><span class="ti-dot"></span>Community Settings</div>
+    <div class="ti-bar"></div>
+    <div class="ti"><span class="ti-dot"></span>BCBA-Led Care</div>
+    <div class="ti-bar"></div>
+    <div class="ti"><span class="ti-dot"></span>Ages 2 &amp; Up</div>
+  </div></div>
+
+  <!-- EMOTION -->
+  <div class="emotion rv"><div class="emotion-inner">
+    <div class="ey">We Understand</div>
+    <h2>You love your child more than anything. And you're exhausted from not knowing what comes next.</h2>
+    <p style="margin-top:18px;">You've sat in the waiting rooms. You've read everything you can find. You know your child has so much more inside them — they just need the right support to let it out.</p>
+    <p>That's what we do. Harrison Bridge ABA comes to you, works in your world, and builds a path forward one meaningful milestone at a time.</p>
+    <div style="margin-top:28px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <a class="btn btn-teal" onclick="gp('intake')">Start Your Journey</a>
+      <a class="btn btn-outline" href="tel:+17047095688">Call <strong>(704) 709-5688</strong></a>
+    </div>
+  </div></div>
+
+  <!-- ABOUT SPLIT -->
+  <div class="about-split">
+    <div class="about-photo">
+      <!-- Warm family/child photo -->
+      <img src="https://images.unsplash.com/photo-1544776193-352d25ca82cd?w=800&q=85&fit=crop" alt="Child and therapist working together"/>
+    </div>
+    <div class="about-text rv">
+      <div class="ey">Who We Are</div>
+      <h2 class="h2">Built for families. Driven by results.</h2>
+      <p style="margin-top:14px;">Harrison Bridge ABA was founded with one mission: give North Carolina families access to gold-standard ABA therapy — delivered in the environments where their children already live, learn, and grow.</p>
+      <p>Our BCBA-led clinical team partners with families at every step. We don't just work on your child — we work with your whole family, building skills that stick long after sessions end.</p>
+      <div class="vpills">
+        <div class="vpill"><span class="vp-dot"></span>Evidence-Based</div>
+        <div class="vpill"><span class="vp-dot"></span>Family-Centered</div>
+        <div class="vpill"><span class="vp-dot"></span>Natural Settings</div>
+        <div class="vpill"><span class="vp-dot"></span>Data-Driven</div>
+      </div>
+      <div style="margin-top:26px;"><a class="btn btn-navy" onclick="gp('about')">Our Story</a></div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <div class="s bg-warm"><div class="si">
+    <div class="rv" style="text-align:center;">
+      <div class="ey">What We Do</div>
+      <h2 class="h2">ABA therapy that comes to you</h2>
+      <p class="lead" style="max-width:500px;margin:10px auto 0;">In every setting where your child lives, learns, and grows.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="sc rv" onclick="gp('services')">
+        <div class="sc-img">
+          <!-- RBT working with child at home -->
+          <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=600&q=80&fit=crop" alt="RBT working with child in home"/>
+          <div class="sc-img-tag">In-Home</div>
+        </div>
+        <div class="sc-body"><h3>In-Home ABA Therapy</h3><p>An RBT and BCBA team delivers therapy in your home — targeting communication, behavior, and daily living skills where your child is most comfortable.</p><div class="sc-link">Learn more →</div></div>
+      </div>
+      <div class="sc rv d1" onclick="gp('services')">
+        <div class="sc-img">
+          <!-- Therapist at school with child -->
+          <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80&fit=crop" alt="School-based ABA support"/>
+          <div class="sc-img-tag">School-Based</div>
+        </div>
+        <div class="sc-body"><h3>School-Based Support</h3><p>We collaborate with teachers and IEP teams to carry ABA strategies from home into the classroom — ensuring consistent support everywhere your child learns.</p><div class="sc-link">Learn more →</div></div>
+      </div>
+      <div class="sc rv d2" onclick="gp('services')">
+        <div class="sc-img">
+          <!-- Child in community setting -->
+          <img src="https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=600&q=80&fit=crop" alt="Community-based ABA therapy"/>
+          <div class="sc-img-tag">Community</div>
+        </div>
+        <div class="sc-body"><h3>Community-Based Services</h3><p>Real independence built in real places — grocery stores, parks, libraries — where the skills your child learns actually get used every day.</p><div class="sc-link">Learn more →</div></div>
+      </div>
+      <div class="sc rv" onclick="gp('services')">
+        <div class="sc-img">
+          <!-- Young children in early learning setting -->
+          <img src="https://images.unsplash.com/photo-1545572214-d8dc05bc3f36?w=600&q=80&fit=crop" alt="Daycare ABA consultation"/>
+          <div class="sc-img-tag">Daycare</div>
+        </div>
+        <div class="sc-body"><h3>Daycare Consultation</h3><p>On-site behavioral support and staff training at your child's daycare or early learning program — consistent support from morning to pickup.</p><div class="sc-link">Learn more →</div></div>
+      </div>
+      <div class="sc rv d1" onclick="gp('services')">
+        <div class="sc-img">
+          <!-- BCBA assessment session -->
+          <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80&fit=crop" alt="BCBA behavioral assessment"/>
+          <div class="sc-img-tag">Assessment</div>
+        </div>
+        <div class="sc-body"><h3>Behavioral Assessments</h3><p>Comprehensive BCBA-led assessments that identify your child's strengths, priorities, and goals — forming the foundation of every personalized treatment plan.</p><div class="sc-link">Learn more →</div></div>
+      </div>
+      <div class="sc rv d2" onclick="gp('services')">
+        <div class="sc-img">
+          <!-- Parent coaching session -->
+          <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=600&q=80&fit=crop" alt="Caregiver training"/>
+          <div class="sc-img-tag">Family</div>
+        </div>
+        <div class="sc-body"><h3>Caregiver Training</h3><p>We coach parents and caregivers with the strategies and confidence to support their child's growth 24/7 — because therapy works best when it continues at home.</p><div class="sc-link">Learn more →</div></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px;"><a class="btn btn-teal" onclick="gp('services')">View All Services</a></div>
+  </div></div>
+
+  <!-- HOW IT WORKS — Golden Steps inspired -->
+  <div class="steps-section"><div class="si">
+    <div class="rv" style="text-align:center;">
+      <div class="ey">How It Works</div>
+      <h2 class="h2">5 simple steps to get started</h2>
+      <p class="lead" style="max-width:480px;margin:10px auto 0;">We guide you through everything. No confusion, no surprises.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-item rv"><div class="step-circle">1</div><h4>Schedule a Consultation</h4><p>Call us or fill out our short form. We learn about your child and answer every question — no pressure.</p></div>
+      <div class="step-item rv d1"><div class="step-circle">2</div><h4>Insurance Verification</h4><p>We handle all insurance checks for you. We confirm your benefits and eligibility at zero cost.</p></div>
+      <div class="step-item rv d2"><div class="step-circle">3</div><h4>BCBA Assessment</h4><p>A Board Certified Behavior Analyst meets with your child to complete a full clinical assessment.</p></div>
+      <div class="step-item rv d3"><div class="step-circle">4</div><h4>Personalized Plan</h4><p>Your BCBA creates an individualized therapy plan designed around your child's unique strengths and goals.</p></div>
+      <div class="step-item rv" style="transition-delay:.4s;"><div class="step-circle">5</div><h4>Therapy Begins</h4><p>We match your family with a trained RBT and start sessions in your home, school, or community.</p></div>
+    </div>
+    <div style="text-align:center;margin-top:52px;" class="rv">
+      <a class="btn btn-teal" onclick="gp('intake')">Schedule Your Free Consultation</a>
+    </div>
+  </div></div>
+
+  <!-- TESTIMONIALS -->
+  <div class="tband rv">
+    <img class="tband-img" src="https://images.unsplash.com/photo-1544776193-352d25ca82cd?w=1600&q=70&fit=crop" alt="Family"/>
+    <div class="tband-ov"></div>
+    <div class="tband-cnt"><div style="text-align:center;max-width:1200px;width:100%;">
+      <div class="ey" style="color:#D4C27A;">Family Stories</div>
+      <h2 class="h2" style="color:#fff;">What NC Families Are Saying</h2>
+      <div class="t-grid">
+        <div class="tc"><div class="tc-stars">★★★★★</div><p>"Harrison Bridge changed everything. For the first time, we have a real plan and real progress. Our daughter is communicating in ways we never thought possible."</p><div class="tc-author"><img class="tc-av" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80&fit=crop&crop=face" alt=""/><div><div class="tc-name">Jennifer M.</div><div class="tc-loc">Charlotte, NC</div></div></div></div>
+        <div class="tc"><div class="tc-stars">★★★★★</div><p>"The RBT meets our son where he is — literally in our kitchen and backyard. He looks forward to every session. That says more than anything."</p><div class="tc-author"><img class="tc-av" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80&fit=crop&crop=face" alt=""/><div><div class="tc-name">Marcus T.</div><div class="tc-loc">Raleigh, NC</div></div></div></div>
+        <div class="tc"><div class="tc-stars">★★★★★</div><p>"The team made us feel heard from day one. They explained everything clearly and involved us in every decision. We finally feel like we have real partners."</p><div class="tc-author"><img class="tc-av" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80&fit=crop&crop=face" alt=""/><div><div class="tc-name">Aisha R.</div><div class="tc-loc">Durham, NC</div></div></div></div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-band"><div class="stat-grid">
+    <div class="stat-box rv"><div class="stat-n">Ages 2–12</div><div class="stat-l">Primary Age Range</div></div>
+    <div class="stat-box rv d1"><div class="stat-n">NC Wide</div><div class="stat-l">Statewide Coverage</div></div>
+    <div class="stat-box rv d2"><div class="stat-n">4+</div><div class="stat-l">Insurance Plans</div></div>
+    <div class="stat-box rv d3"><div class="stat-n">BCBA</div><div class="stat-l">Clinician-Led Care</div></div>
+  </div></div>
+
+  <!-- INSURANCE PREVIEW -->
+  <div class="s bg-warm"><div class="si"><div class="ins-wrap">
+    <div class="rv">
+      <div class="ey">Coverage</div>
+      <h2 class="h2">We accept your insurance</h2>
+      <p class="lead" style="margin:12px 0 18px;">We work with Medicaid and major insurance plans to ensure quality ABA therapy is accessible to every NC family that needs it.</p>
+      <ul class="ins-list">
+        <li class="ins-row"><div class="ins-chk">✓</div>Medicaid Accepted</li>
+        <li class="ins-row"><div class="ins-chk">✓</div>In-Network with Major Managed Care Organizations</li>
+        <li class="ins-row"><div class="ins-chk">✓</div>Most Private Insurance Plans Accepted</li>
+        <li class="ins-row"><div class="ins-chk">✓</div>We verify your benefits at no cost to you</li>
+      </ul>
+      <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;">
+        <a class="btn btn-teal" onclick="gp('insurance')">Insurance Details</a>
+        <a class="btn btn-outline" onclick="gp('intake')">Verify My Coverage</a>
+      </div>
+    </div>
+    <div class="ins-photo rv d1">
+      <!-- Family with child photo -->
+      <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=700&q=80&fit=crop" alt="Family"/>
+      <div class="ins-cap">
+        <h4>Not sure if you're covered?</h4>
+        <p>We verify your child's benefits at no cost — no confusion, no surprises.</p>
+        <a class="btn btn-gold btn-sm" onclick="gp('intake')">Verify My Coverage</a>
+      </div>
+    </div>
+  </div></div></div>
+
+  <!-- CTA -->
+  <div class="cta"><div style="position:relative;z-index:1;" class="rv">
+    <div class="ey" style="color:#D4C27A;">Take the First Step</div>
+    <h2 class="h2">Your child's next milestone starts with one conversation.</h2>
+    <p class="lead">No pressure, no commitment. Just reach out and let's talk about what's possible for your family.</p>
+    <div class="cta-row">
+      <a class="btn btn-teal" onclick="gp('intake')">Get Started Free</a>
+      <a class="btn btn-outline-w" href="tel:+17047095688">Call <strong>(704) 709-5688</strong></a>
+    </div>
+  </div></div>
+
+  <footer><div class="ft">
+    <div class="ft-top">
+      <div>
+        <div style="display:flex;align-items:center;gap:12px;cursor:pointer;" onclick="gp('home')">
+          <div style="display:flex;flex-direction:column;gap:3px;"><div style="width:5px;height:28px;background:var(--teal);border-radius:3px;"></div><div style="width:5px;height:14px;background:var(--gold);border-radius:3px;"></div></div>
+          <div><div style="font-family:'DM Serif Display',serif;font-size:17px;color:#fff;">Harrison Bridge</div><div style="font-size:8px;font-weight:700;letter-spacing:2.5px;color:rgba(255,255,255,.28);text-transform:uppercase;margin-top:2px;">Applied Behavior Analysis</div></div>
+        </div>
+        <p class="ft-desc">Compassionate, evidence-based ABA therapy for children across North Carolina — in home, school, community, and daycare settings.</p>
+      </div>
+      <div class="ft-col"><h5>Company</h5><ul><li><a onclick="gp('about')">About Us</a></li><li><a onclick="gp('services')">Services</a></li><li><a onclick="gp('locations')">Locations</a></li><li><a onclick="gp('insurance')">Insurance</a></li><li><a onclick="gp('careers')">Careers</a></li></ul></div>
+      <div class="ft-col"><h5>Resources</h5><ul><li><a onclick="gp('resources')">Blog & Articles</a></li><li><a onclick="gp('faq')">FAQ</a></li><li><a onclick="gp('intake')">Get Started</a></li></ul></div>
+      <div class="ft-col"><h5>Contact</h5><ul><li><a href="tel:+17047095688">(704) 709-5688</a></li><li><a href="mailto:info@harrisonbridgeaba.com">info@harrisonbridgeaba.com</a></li><li><a href="tel:+17047099994">Fax: (704) 709-9994</a></li><li><a onclick="gp('locations')">All of North Carolina</a></li></ul></div>
+    </div>
+    <div class="ft-rule"></div>
+    <div class="ft-bot">
+      <p>&copy; 2026 Harrison Bridge ABA. All rights reserved.</p>
+      <div class="ft-badges"><span class="ft-badge">BCBA-Led</span><span class="ft-badge">NC Provider</span><span class="ft-badge">Insurance Accepted</span></div>
+    </div>
+  </div></footer>
+</div>
+
+<!-- ════════ ABOUT ════════ -->
+<div class="page" id="page-about">
+  <div class="ph bg-warm"><div class="ph-inner"><div><div class="ey">Our Story</div><h1>Built for families. Led by clinicians. Driven by love.</h1><p>We exist to bridge the gap between where a child is today and where they are capable of going — through science, warmth, and genuine commitment to every family we serve.</p></div><div class="ph-img"><img src="https://images.unsplash.com/photo-1544776193-352d25ca82cd?w=700&q=80&fit=crop" alt="Team with child"/></div></div></div>
+  <div class="s"><div class="si">
+    <div class="mission rv"><h2>Our Mission</h2><p>Harrison Bridge ABA exists to bridge the gap between where a child is today and where they are capable of going. Through the science of Applied Behavior Analysis — delivered with genuine warmth, deep clinical expertise, and unwavering commitment to every family — we help children across North Carolina reach milestones that matter.</p></div>
+    <div class="rv" style="margin-bottom:26px;"><div class="ey">What We Stand For</div><h2 class="h2">Our Core Values</h2></div>
+    <div class="vals-grid">
+      <div class="vcard rv"><div class="vnum">01</div><h4>Evidence-Based Practice</h4><p>Every decision grounded in the science of behavior analysis. Proven, research-backed methods with data driving every step of progress.</p></div>
+      <div class="vcard rv d1"><div class="vnum">02</div><h4>Family as Partners</h4><p>Parents aren't bystanders — they're essential members of the treatment team. We collaborate, communicate, and train families to sustain progress around the clock.</p></div>
+      <div class="vcard rv d2"><div class="vnum">03</div><h4>Child-Centered Always</h4><p>Every plan is individualized. We start with each child's strengths and goals — building therapy that feels natural and joyful, not clinical.</p></div>
+      <div class="vcard rv"><div class="vnum">04</div><h4>Compassion Over Everything</div><p>Science without heart isn't enough. We bring genuine warmth to every session because children thrive when they feel safe, seen, and valued.</p></div>
+      <div class="vcard rv d1"><div class="vnum">05</div><h4>Full Transparency</h4><p>Families deserve to know exactly what we're doing and why. We share data clearly and communicate openly at every stage of treatment.</p></div>
+      <div class="vcard rv d2"><div class="vnum">06</div><h4>Committed to Access</h4><p>Every North Carolina family deserves high-quality ABA. We accept Medicaid and work tirelessly to remove every barrier to care.</p></div>
+    </div>
+  </div></div>
+  <div class="cta"><div style="position:relative;z-index:1;" class="rv"><div class="ey" style="color:#D4C27A;">Ready?</div><h2 class="h2">Let's talk about your child</h2><p class="lead">No pressure, no commitment — just a conversation about what's possible.</p><div class="cta-row"><a class="btn btn-teal" onclick="gp('intake')">Get Started Free</a><a class="btn btn-outline-w" href="tel:+17047095688">Call (704) 709-5688</a></div></div></div>
+  <footer><div class="ft"><div class="ft-top"><div><div style="display:flex;align-items:center;gap:12px;cursor:pointer;" onclick="gp('home')"><div style="display:flex;flex-direction:column;gap:3px;"><div style="width:5px;height:28px;background:var(--teal);border-radius:3px;"></div><div style="width:5px;height:14px;background:var(--gold);border-radius:3px;"></div></div><div><div style="font-family:'DM Serif Display',serif;font-size:17px;color:#fff;">Harrison Bridge</div><div style="font-size:8px;font-weight:700;letter-spacing:2.5px;color:rgba(255,255,255,.28);text-transform:uppercase;margin-top:2px;">Applied Behavior Analysis</div></div></div><p class="ft-desc">ABA therapy across North Carolina.</p></div><div class="ft-col"><h5>Company</h5><ul><li><a onclick="gp('about')">About</a></li><li><a onclick="gp('services')">Services</a></li><li><a onclick="gp('careers')">Careers</a></li><li><a onclick="gp('intake')">Get Started</a></li></ul></div><div class="ft-col"><h5>Resources</h5><ul><li><a onclick="gp('resources')">Blog</a></li><li><a onclick="gp('faq')">FAQ</a></li></ul></div><div class="ft-col"><h5>Contact</h5><ul><li><a href="tel:+17047095688">(704) 709-5688</a></li><li><a href="mailto:info@harrisonbridgeaba.com">info@</a></li></ul></div></div><div class="ft-rule"></div><div class="ft-bot"><p>&copy; 2026 Harrison Bridge ABA</p><div class="ft-badges"><span class="ft-badge">BCBA-Led</span></div></div></div></footer>
+</div>
+
+<!-- ════════ SERVICES ════════ -->
+<div class="page" id="page-services">
+  <div class="ph bg-warm"><div class="ph-inner"><div><div class="ey">What We Offer</div><h1>ABA therapy that meets your child where they are</h1><p>Every service is delivered in your child's natural environment by compassionate, BCBA-supervised clinicians and trained RBTs.</p></div><div class="ph-img"><img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=700&q=80&fit=crop" alt="RBT with child"/></div></div></div>
+  <div class="s"><div class="si">
+    <div class="svc-full-grid">
+      <div class="sf rv">
+        <div class="sf-img"><img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=700&q=80&fit=crop" alt="In-home RBT session"/><div class="sf-img-tag">In-Home</div></div>
+        <div class="sf-body"><h3>In-Home ABA Therapy</h3><p>Our trained RBTs and BCBA supervisors bring individualized, naturalistic ABA directly into your home. Sessions target communication, daily living skills, social behaviors, and behavior reduction in the environment your child knows and trusts. Every plan is built around your family's schedule and your child's unique goals.</p></div>
+      </div>
+      <div class="sf rv d1">
+        <div class="sf-img"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=700&q=80&fit=crop" alt="School-based support"/><div class="sf-img-tag">School-Based</div></div>
+        <div class="sf-body"><h3>School-Based Support</h3><p>Our clinicians collaborate with teachers, aides, and IEP teams to carry ABA strategies into the classroom. We provide direct therapy support, data collection, and staff consultation — ensuring the skills your child learns at home show up at school every day.</p></div>
+      </div>
+      <div class="sf rv">
+        <div class="sf-img"><img src="https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=700&q=80&fit=crop" alt="Community-based ABA"/><div class="sf-img-tag">Community</div></div>
+        <div class="sf-body"><h3>Community-Based Services</h3><p>True independence means navigating the real world. We work with children in grocery stores, parks, libraries, and recreational centers — building the skills that matter most outside the home and therapy room.</p></div>
+      </div>
+      <div class="sf rv d1">
+        <div class="sf-img"><img src="https://images.unsplash.com/photo-1545572214-d8dc05bc3f36?w=700&q=80&fit=crop" alt="Daycare ABA consultation"/><div class="sf-img-tag">Daycare</div></div>
+        <div class="sf-body"><h3>Daycare Consultation</h3><p>We partner with daycare centers and early learning programs to provide on-site consultation, behavior support plans, and staff training — creating a consistent, supportive environment throughout your child's entire day.</p></div>
+      </div>
+      <div class="sf rv">
+        <div class="sf-img"><img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=700&q=80&fit=crop" alt="BCBA behavioral assessment"/><div class="sf-img-tag">Assessment</div></div>
+        <div class="sf-body"><h3>Behavioral Assessments</h3><p>Before treatment begins, our BCBAs conduct comprehensive functional behavior assessments and skills evaluations. This forms the scientific foundation of every individualized treatment plan we build — identifying your child's strengths, priorities, and the functions behind challenging behaviors.</p></div>
+      </div>
+      <div class="sf rv d1">
+        <div class="sf-img"><img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=700&q=80&fit=crop" alt="Caregiver parent training"/><div class="sf-img-tag">Family</div></div>
+        <div class="sf-body"><h3>Caregiver Training</h3><p>Parents are the most important people in a child's life. Our structured coaching gives caregivers the strategies, tools, and confidence to support their child's growth 24/7 — because progress in therapy only sticks when it carries into everyday life.</p></div>
+      </div>
+    </div>
+    <div class="cta" style="border-radius:22px;margin-top:52px;padding:68px 5%;"><div style="position:relative;z-index:1;max-width:660px;margin:0 auto;text-align:center;" class="rv"><h2 class="h2" style="color:#fff;">Ready to get started?</h2><p class="lead" style="color:rgba(255,255,255,.5);margin:10px 0 28px;">No pressure — just a free conversation about your child.</p><div class="cta-row" style="justify-content:center;"><a class="btn btn-teal" onclick="gp('intake')">Schedule Free Consultation</a><a class="btn btn-outline-w" href="tel:+17047095688">Call (704) 709-5688</a></div></div></div>
+  </div></div>
+  <footer><div class="ft"><div class="ft-top"><div><div style="display:flex;align-items:center;gap:12px;cursor:pointer;" onclick="gp('home')"><div style="display:flex;flex-direction:column;gap:3px;"><div style="width:5px;height:28px;background:var(--teal);border-radius:3px;"></div><div style="width:5px;height:14px;background:var(--gold);border-radius:3px;"></div></div><div><div style="font-family:'DM Serif Display',serif;font-size:17px;color:#fff;">Harrison Bridge</div><div style="font-size:8px;font-weight:700;letter-spacing:2.5px;color:rgba(255,255,255,.28);text-transform:uppercase;margin-top:2px;">Applied Behavior Analysis</div></div></div><p class="ft-desc">ABA therapy across North Carolina.</p></div><div class="ft-col"><h5>Services</h5><ul><li><a onclick="gp('services')">In-Home</a></li><li><a onclick="gp('services')">School-Based</a></li><li><a onclick="gp('services')">Community</a></li><li><a onclick="gp('services')">Daycare</a></li></ul></div><div class="ft-col"><h5>Company</h5><ul><li><a onclick="gp('about')">About</a></li><li><a onclick="gp('insurance')">Insurance</a></li><li><a onclick="gp('careers')">Careers</a></li><li><a onclick="gp('intake')">Get Started</a></li></ul></div><div class="ft-col"><h5>Contact</h5><ul><li><a href="tel:+17047095688">(704) 709-5688</a></li><li><a href="mailto:info@harrisonbridgeaba.com">info@</a></li></ul></div></div><div class="ft-rule"></div><div class="ft-bot"><p>&copy; 2026 Harrison Bridge ABA</p></div></div></footer>
+</div>
+
+<!-- ════════ LOCATIONS ════════ -->
+<div class="page" id="page-locations">
+  <div class="ph bg-warm"><div class="ph-inner"><div><div class="ey">Where We Serve</div><h1>Serving families across all of North Carolina</h1><p>We come to you — no center required, no commute needed. Wherever your family is in NC, we're there.</p></div><div class="ph-img"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=700&q=80&fit=crop" alt="North Carolina"/></div></div></div>
+  <div class="s"><div class="si">
+    <div class="loc-map rv">
+      <h2>All of North Carolina</h2>
+      <p>Harrison Bridge ABA is a mobile provider — we deliver therapy in your child's natural environments anywhere across NC. Contact us to confirm availability in your specific city or area.</p>
+      <a class="btn btn-teal" onclick="gp('intake')">Confirm My Area</a>
+      <div class="cities-grid">
+        <div class="city">Charlotte</div><div class="city">Raleigh</div><div class="city">Greensboro</div><div class="city">Durham</div>
+        <div class="city">Winston-Salem</div><div class="city">Fayetteville</div><div class="city">Cary</div><div class="city">Wilmington</div>
+        <div class="city">High Point</div><div class="city">Concord</div><div class="city">Asheville</div><div class="city">Gastonia</div>
+        <div class="city">Jacksonville</div><div class="city">Chapel Hill</div><div class="city">Rocky Mount</div><div class="city">Burlington</div>
+        <div class="city">Huntersville</div><div class="city">Wilson</div><div class="city">Kannapolis</div><div class="city">Apex</div>
+        <div class="city">Greenville</div><div class="city">Mooresville</div><div class="city">Monroe</div><div class="city">Sanford</div>
+        <div class="city">Hickory</div><div class="city">Goldsboro</div><div class="city">Matthews</div><div class="city">Indian Trail</div>
+        <div class="city">Salisbury</div><div class="city">New Bern</div><div class="city">Holly Springs</div><div class="city">Fuquay-Varina</div>
+        <div class="city">Morrisville</div><div class="city">Garner</div><div class="city">Statesville</div><div class="city">Cornelius</div>
+        <div class="city">Asheboro</div><div class="city">Mint Hill</div><div class="city">Wake Forest</div><div class="city">And More...</div>
+      </div>
+    </div>
+    <div class="rv" style="margin-bottom:32px;"><div class="ey">Service Settings</div><h2 class="h2">Every place that matters to your child</h2></div>
+    <div class="loc-grid">
+      <div class="lc rv"><div class="lc-img"><img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=600&q=80&fit=crop" alt="In-home ABA"/></div><div class="lc-body"><h3>Your Home</h3><p>The most natural environment for your child. Sessions target real daily routines — meals, play, bedtime — with your family fully involved.</p></div></div>
+      <div class="lc rv d1"><div class="lc-img"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80&fit=crop" alt="School support"/></div><div class="lc-body"><h3>Your Child's School</h3><p>We coordinate with teachers and IEP teams so skills learned at home carry into the classroom and social settings every day.</p></div></div>
+      <div class="lc rv"><div class="lc-img"><img src="https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=600&q=80&fit=crop" alt="Community ABA"/></div><div class="lc-body"><h3>The Community</h3><p>Parks, stores, libraries, places of worship — we build real independence where it actually matters in your child's everyday world.</p></div></div>
+      <div class="lc rv d1"><div class="lc-img"><img src="https://images.unsplash.com/photo-1545572214-d8dc05bc3f36?w=600&q=80&fit=crop" alt="Daycare consultation"/></div><div class="lc-body"><h3>Daycare & Preschool</h3><p>On-site behavioral support and staff training — from morning drop-off to afternoon pickup, your child gets consistent support all day.</p></div></div>
+    </div>
+  </div></div>
+  <footer><div class="ft"><div class="ft-top"><div><div style="display:flex;align-items:center;gap:12px;cursor:pointer;" onclick="gp('home')"><div style="display:flex;flex-direction:column;gap:3px;"><div style="width:5px;height:28px;background:var(--teal);border-radius:3px;"></div><div style="width:5px;height:14px;background:var(--gold);border-radius:3px;"></div></div><div><div style="font-family:'DM Serif Display',serif;font-size:17px;color:#fff;">Harrison Bridge</div><div style="font-size:8px;font-weight:700;letter-spacing:2.5px;color:rgba(255,255,255,.28);text-transform:uppercase;margin-top:2px;">Applied Behavior Analysis</div></div></div><p class="ft-desc">ABA therapy across all of North Carolina.</p></div><div class="ft-col"><h5>Services</h5><ul><li><a onclick="gp('services')">In-Home</a></li><li><a onclick="gp('services')">School-Based</a></li><li><a onclick="gp('services')">Community</a></li></ul></div><div class="ft-col"><h5>Company</h5><ul><li><a onclick="gp('about')">About</a></li><li><a onclick="gp('insurance')">Insurance</a></li><li><a onclick="gp('intake')">Get Started</a></li></ul></div><div class="ft-col"><h5>Contact</h5><ul><li><a href="tel:+17047095688">(704) 709-5688</a></li><li><a href="mailto:info@harrisonbridgeaba.com">info@</a></li></ul></div></div><div class="ft-rule"></div><div class="ft-bot"><p>&copy; 2026 Harrison Bridge ABA</p></div></div></footer>
+</div>
+
+<!-- ════════ INSURANCE ════════ -->
+<div class="page" id="page-insurance">
+  <div class="ph bg-warm"><div class="ph-inner"><div><div class="ey">Coverage & Billing</div><h1>We accept your insurance. We handle the paperwork.</h1><p>Insurance should never be a barrier to getting your child the support they need. We make it simple.</p></div><div class="ph-img"><img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=700&q=80&fit=crop" alt="Family"/></div></div></div>
+  <div class="s"><div class="si"><div class="ins-page">
+    <div>
+      <div class="pcard rv">
+        <h3>Insurance We Accept</h3>
+        <div class="prow"><div class="pb">MC</div><div><div class="pr-h">Medicaid</div><div class="pr-p">Accepting Medicaid across North Carolina</div></div><span class="ps ps-a">Accepted</span></div>
+        <div class="prow"><div class="pb">MC</div><div><div class="pr-h">Managed Care Organizations</div><div class="pr-p">In-network with major NC managed care plans</div></div><span class="ps ps-a">In-Network</span></div>
+        <div class="prow"><div class="pb">PI</div><div><div class="pr-h">Private Insurance</div><div class="pr-p">Most commercial plans accepted — we verify yours</div></div><span class="ps ps-a">Most Plans</span></div>
+        <div class="prow"><div class="pb">+</div><div><div class="pr-h">Additional Plans</div><div class="pr-p">Actively adding more insurance partners</div></div><span class="ps ps-p">Expanding</span></div>
+      </div>
+      <div style="background:var(--warm);border-radius:16px;padding:26px;margin-top:18px;" class="rv">
+        <h3 class="h3" style="margin-bottom:10px;">What does ABA coverage include?</h3>
+        <p style="font-size:14px;color:var(--gray);line-height:1.85;font-weight:300;">Most insurance plans cover ABA therapy when there is a qualifying diagnosis such as Autism Spectrum Disorder and a physician recommendation. Coverage typically includes initial assessments, direct therapy sessions, and caregiver training. We verify your specific benefits at no cost to you before anything begins.</p>
+      </div>
+    </div>
+    <div class="ins-stack">
+      <div class="isc rv"><div class="isc-img"><img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=600&q=80&fit=crop" alt="Family"/></div><div class="isc-body"><h3>Not sure if you're covered?</h3><p>We check your benefits at no cost, handle the paperwork, and walk you through your options clearly. No confusion, no surprises.</p><a class="btn btn-teal btn-sm" onclick="gp('intake')">Verify My Coverage</a></div></div>
+      <div class="isc rv" style="border:1.5px solid var(--border);border-radius:18px;"><div class="isc-body"><h3>Questions about billing?</h3><p>Our team is happy to walk you through everything. Call us directly and we'll answer any billing or coverage question simply and clearly.</p><p style="margin-top:10px;"><a href="tel:+17047095688" style="color:var(--teal);font-weight:700;font-size:15px;">(704) 709-5688</a></p></div></div>
+    </div>
+  </div></div></div>
+  <footer><div class="ft"><div class="ft-top"><div><div style="display:flex;align-items:center;gap:12px;cursor:pointer;" onclick="gp('home')"><div style="display:flex;flex-direction:column;gap:3px;"><div style="width:5px;height:28px;background:var(--teal);border-radius:3px;"></div><div style="width:5px;height:14px;background:var(--gold);border-radius:3px;"></div></div><div><div style="font-family:'DM Serif Display',serif;font-size:17px;color:#fff;">Harrison Bridge</div><div style="font-size:8px;font-weight:700;letter-spacing:2.5px;color:rgba(255,255,255,.28);text-transform:uppercase;margin-top:2px;">Applied Behavior Analysis</div></div></div><p class="ft-desc">ABA therapy across North Carolina.</p></div><div class="ft-col"><h5>Services</h5><ul><li><a onclick="gp('services')">In-Home</a></li><li><a onclick="gp('services')">School-Based</a></li><li><a onclick="gp('services')">Community</a></li></ul></div><div class="ft-col"><h5>Company</h5><ul><li><a onclick="gp('about')">About</a></li><li><a onclick="gp('locations')">Locations</a></li><li><a onclick="gp('intake')">Get Started</a></li></ul></div><div class="ft-col"><h5>Contact</h5><ul><li><a href="tel:+17047095688">(704) 709-5688</a></li><li><a href="mailto:info@harrisonbridgeaba.com">info@</a></li></ul></div></div><div class="ft-rule"></div><div class="ft-bot"><p>&copy; 2026 Harrison Bridge ABA</p></div></div></footer>
+</div>
+
+<!-- ════════ CAREERS ════════ -->
+<div class="page" id="page-careers">
+  <div class="ph bg-warm"><div class="ph-inner"><div><div class="ey">Join Our Team</div><h1>Do the most meaningful work of your career</h1><p>We're building a team of passionate clinicians who believe in the real, measurable power of ABA to change children's lives.</p></div><div class="ph-img"><img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=700&q=80&fit=crop" alt="Clinical team"/></div></div></div>
+  <div style="padding:0;">
+    <div class="car-split">
+      <div class="car-photo"><img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&q=80&fit=crop" alt="Clinical team"/></div>
+      <div class="car-txt rv">
+        <div class="ey">Why Harrison Bridge?</div>
+        <h2 class="h2">Meaningful work, every single day.</h2>
+        <p>We're building our team with clinicians as passionate about children's growth as we are. Clinical excellence, a supportive culture, flexible scheduling, and work that genuinely changes the lives of NC families.</p>
+        <a class="btn btn-navy" href="mailto:info@harrisonbridgeaba.com?subject=Career Inquiry — Harrison Bridge ABA">Send Us Your Resume</a>
+        <div class="pos-list" style="margin-top:24px;">
+          <div class="pos"><div><h4>Board Certified Behavior Analyst (BCBA)</h4><div class="pos-tags"><span class="tag tag-t">Full-Time</span><span class="tag tag-n">North Carolina</span><span class="tag tag-g">Hiring Now</span></div></div><a class="pos-btn" href="mailto:info@harrisonbridgeaba.com?subject=BCBA Application">Apply Now</a></div>
+          <div class="pos"><div><h4>Registered Behavior Technician (RBT)</h4><div class="pos-tags"><span class="tag tag-t">Full/Part-Time</span><span class="tag tag-n">NC</span><span class="tag tag-g">Hiring Now</span></div></div><a class="pos-btn" href="mailto:info@harrisonbridgeaba.com?subject=RBT Application">Apply Now</a></div>
+          <div class="pos"><div><h4>BCaBA / Supervised Analyst</h4><div class="pos-tags"><span class="tag tag-t">Full-Time</span><span class="tag tag-n">North Carolina</span></div></div><a class="pos-btn" href="mailto:info@harrisonbridgeaba.com?subject=BCaBA Application">Apply Now</a></div>
+          <div class="pos"><div><h4>Early Intervention Specialist</h4><div class="pos-tags"><span class="tag tag-t">Full-Time</span><span class="tag tag-n">North Carolina</span></div></div><a class="pos-btn" href="mailto:info@harrisonbridgeaba.com?subject=Specialist Application">Apply Now</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="s bg-warm"><div class="si">
+    <div class="rv" style="text-align:center;margin-bottom:32px;"><div class="ey">Benefits</div><h2 class="h2">What we offer our team</h2></div>
+    <div class="perks-grid">
+      <div class="perk rv"><div class="perk-ico">💰</div><h4>Competitive Pay</h4><p>Compensation that reflects your credentials, experience, and the real impact you make every day.</p></div>
+      <div class="perk rv d1"><div class="perk-ico">📈</div><h4>Career Growth</h4><p>Clear pathways from RBT to BCBA with supervision hours, training, and mentorship provided.</p></div>
+      <div class="perk rv d2"><div class="perk-ico">⏰</div><h4>Flexible Scheduling</h4><p>Morning, afternoon, and evening availability across NC — we build schedules around your life.</p></div>
+      <div class="perk rv"><div class="perk-ico">🧠</div><h4>Clinical Supervision</h4><p>BCBA supervision available for RBTs and BCaBAs working toward full certification.</p></div>
+      <div class="perk rv d1"><div class="perk-ico">❤️</div><h4>Supportive Culture</h4><p>A collaborative, inclusive team that has your back — clinically and personally, every day.</p></div>
+      <div class="perk rv d2"><div class="perk-ico">🌍</div><h4>Real Impact</h4><p>Serve NC families who genuinely need what you do — and see the difference you make every single day.</p></div>
+    </div>
+  </div></div>
+  <footer><div class="ft"><div class="ft-top"><div><div style="display:flex;align-items:center;gap:12px;cursor:pointer;" onclick="gp('home')"><div style="display:flex;flex-direction:column;gap:3px;"><div style="width:5px;height:28px;background:var(--teal);border-radius:3px;"></div><div style="width:5px;height:14px;background:var(--gold);border-radius:3px;"></div></div><div><div style="font-family:'DM Serif Display',serif;font-size:17px;color:#fff;">Harrison Bridge</div><div style="font-size:8px;font-weight:700;letter-spacing:2.5px;color:rgba(255,255,255,.28);text-transform:uppercase;margin-top:2px;">Applied Behavior Analysis</div></div></div><p class="ft-desc">ABA therapy across North Carolina.</p></div><div class="ft-col"><h5>Services</h5><ul><li><a onclick="gp('services')">In-Home</a></li><li><a onclick="gp('services')">School-Based</a></li><li><a onclick="gp('services')">Community</a></li></ul></div><div class="ft-col"><h5>Company</h5><ul><li><a onclick="gp('about')">About</a></li><li><a onclick="gp('locations')">Locations</a></li><li><a onclick="gp('intake')">Get Started</a></li></ul></div><div class="ft-col"><h5>Contact</h5><ul><li><a href="tel:+17047095688">(704) 709-5688</a></li><li><a href="mailto:info@harrisonbridgeaba.com">info@</a></li></ul></div></div><div class="ft-rule"></div><div class="ft-bot"><p>&copy; 2026 Harrison Bridge ABA</p></div></div></footer>
+</div>
+
+<!-- ════════ RESOURCES ════════ -->
+<div class="page" id="page-resources">
+  <div class="ph bg-warm"><div class="ph-inner"><div><div class="ey">Resources & Blog</div><h1>Helpful resources for NC families</h1><p>Articles, guides, and insights to help you navigate ABA therapy, insurance, and your child's journey.</p></div><div class="ph-img"><img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=700&q=80&fit=crop" alt="Resources"/></div></div></div>
+  <div class="s"><div class="si">
+    <div class="blog-grid">
+      <div class="blog-card rv"><div class="blog-img"><img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=600&q=80&fit=crop" alt="ABA therapy"/></div><div class="blog-body"><div class="blog-cat">ABA Basics</div><h3>What Is ABA Therapy? A Parent's Complete Guide</h3><p>Everything you need to know about Applied Behavior Analysis — what it is, how it works, and what to expect for your child.</p><div class="blog-date">March 2026</div></div></div>
+      <div class="blog-card rv d1"><div class="blog-img"><img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=600&q=80&fit=crop" alt="Insurance"/></div><div class="blog-body"><div class="blog-cat">Insurance</div><h3>How to Navigate Insurance Coverage for ABA in NC</h3><p>A step-by-step guide to understanding your benefits, what's covered, and how to get your child's ABA therapy approved.</p><div class="blog-date">February 2026</div></div></div>
+      <div class="blog-card rv d2"><div class="blog-img"><img src="https://images.unsplash.com/photo-1544776193-352d25ca82cd?w=600&q=80&fit=crop" alt="Home tips"/></div><div class="blog-body"><div class="blog-cat">Family Tips</div><h3>5 Ways to Support Your Child's ABA Goals at Home</h3><p>Practical strategies parents can use every single day to reinforce the skills their child is learning in therapy sessions.</p><div class="blog-date">January 2026</div></div></div>
+      <div class="blog-card rv"><div class="blog-img"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80&fit=crop" alt="School IEP"/></div><div class="blog-body"><div class="blog-cat">School & IEP</div><h3>Working With Your Child's School: A Guide to IEP Collaboration</h3><p>How to work effectively with teachers, aides, and administrators to support your child's development at school.</p><div class="blog-date">December 2025</div></div></div>
+      <div class="blog-card rv d1"><div class="blog-img"><img src="https://images.unsplash.com/photo-1545572214-d8dc05bc3f36?w=600&q=80&fit=crop" alt="Early intervention"/></div><div class="blog-body"><div class="blog-cat">Early Intervention</div><h3>Why Early Intervention Matters: What the Research Says</h3><p>The science behind early ABA intervention and why starting therapy earlier leads to significantly better long-term outcomes.</p><div class="blog-date">November 2025</div></div></div>
+      <div class="blog-card rv d2"><div class="blog-img"><img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=600&q=80&fit=crop" alt="Caregiver support"/></div><div class="blog-body"><div class="blog-cat">Caregiver Support</div><h3>Taking Care of Yourself While Caring for Your Child</h3><p>Resources and strategies for parents navigating the emotional journey of raising a child with ASD.</p><div class="blog-date">October 2025</div></div></div>
+    </div>
+  </div></div>
+  <footer><div class="ft"><div class="ft-top"><div><div style="display:flex;align-items:center;gap:12px;cursor:pointer;" onclick="gp('home')"><div style="display:flex;flex-direction:column;gap:3px;"><div style="width:5px;height:28px;background:var(--teal);border-radius:3px;"></div><div style="width:5px;height:14px;background:var(--gold);border-radius:3px;"></div></div><div><div style="font-family:'DM Serif Display',serif;font-size:17px;color:#fff;">Harrison Bridge</div><div style="font-size:8px;font-weight:700;letter-spacing:2.5px;color:rgba(255,255,255,.28);text-transform:uppercase;margin-top:2px;">Applied Behavior Analysis</div></div></div><p class="ft-desc">ABA therapy across North Carolina.</p></div><div class="ft-col"><h5>Company</h5><ul><li><a onclick="gp('about')">About</a></li><li><a onclick="gp('services')">Services</a></li><li><a onclick="gp('faq')">FAQ</a></li><li><a onclick="gp('intake')">Get Started</a></li></ul></div><div class="ft-col"><h5>Resources</h5><ul><li><a onclick="gp('resources')">Blog</a></li><li><a onclick="gp('faq')">FAQ</a></li></ul></div><div class="ft-col"><h5>Contact</h5><ul><li><a href="tel:+17047095688">(704) 709-5688</a></li><li><a href="mailto:info@harrisonbridgeaba.com">info@</a></li></ul></div></div><div class="ft-rule"></div><div class="ft-bot"><p>&copy; 2026 Harrison Bridge ABA</p></div></div></footer>
+</div>
+
+<!-- ════════ FAQ ════════ -->
+<div class="page" id="page-faq">
+  <div class="ph bg-warm"><div class="ph-inner"><div><div class="ey">FAQ</div><h1>Answers to your most common questions</h1><p>Everything families ask before getting started — answered honestly and clearly.</p></div><div class="ph-img"><img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=700&q=80&fit=crop" alt="Family"/></div></div></div>
+  <div class="s"><div class="si">
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q" onclick="tf(this)">What is ABA therapy?<span class="faq-ico">+</span></button><div class="faq-a"><p>Applied Behavior Analysis (ABA) is a scientific, evidence-based approach to understanding and changing behavior. It is widely recognized as the gold standard treatment for Autism Spectrum Disorder. ABA uses data, positive reinforcement, and individualized treatment plans to help children build communication skills, daily living skills, social skills, and reduce challenging behaviors.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="tf(this)">What ages do you serve?<span class="faq-ico">+</span></button><div class="faq-a"><p>Harrison Bridge ABA primarily serves children ages 2 through 12. However, there is no hard cutoff — we evaluate each child individually. Contact us to discuss your child's specific situation and we will work with you to find the right fit.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="tf(this)">Does my insurance cover ABA therapy?<span class="faq-ico">+</span></button><div class="faq-a"><p>Most Medicaid plans and many private insurance plans cover ABA therapy when there is a qualifying diagnosis such as Autism Spectrum Disorder and a physician recommendation. We verify your specific benefits at absolutely no cost to you. Contact us and we will check your coverage and walk you through your options clearly — no confusion, no surprises.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="tf(this)">How is Harrison Bridge ABA different from other providers?<span class="faq-ico">+</span></button><div class="faq-a"><p>We come to you. Unlike center-based providers, Harrison Bridge ABA delivers every service in your child's natural environments — home, school, daycare, and community. Skills are learned where they matter most and generalize faster. We are also deeply committed to family partnership — parents are trained and involved in every step of the process.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="tf(this)">What does a typical ABA session look like?<span class="faq-ico">+</span></button><div class="faq-a"><p>Every session is tailored to your child's individualized treatment plan. Sessions involve structured activities, naturalistic teaching moments, data collection, and positive reinforcement. Our RBTs make sessions engaging and fun for children. Parent involvement is encouraged — we want caregivers to observe and participate so strategies carry over throughout the entire day.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="tf(this)">How long does it take to get started?<span class="faq-ico">+</span></button><div class="faq-a"><p>After your initial consultation, we verify your insurance benefits typically within a few business days. We then schedule the BCBA assessment in your home. Once complete, we develop your child's treatment plan and therapy begins. The full process from first contact to therapy starting typically takes 2–4 weeks depending on insurance authorization timelines.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="tf(this)">Do you work with children without an autism diagnosis?<span class="faq-ico">+</span></button><div class="faq-a"><p>Yes. While ABA therapy is most commonly associated with Autism Spectrum Disorder, it is effective for children with developmental delays, intellectual disabilities, ADHD, and other behavioral challenges. Contact us to discuss your child's specific situation and we will assess the right fit.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="tf(this)">What is a BCBA and what is an RBT?<span class="faq-ico">+</span></button><div class="faq-a"><p>A BCBA (Board Certified Behavior Analyst) is a licensed clinician who has completed advanced graduate-level education, supervised clinical experience, and passed a national certification exam. They design and oversee all treatment plans. An RBT (Registered Behavior Technician) is a trained therapist who delivers the direct therapy sessions under BCBA supervision. At Harrison Bridge ABA, every plan is designed by a BCBA and delivered by a trained RBT.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="tf(this)">How do I get started?<span class="faq-ico">+</span></button><div class="faq-a"><p>Getting started is simple. Fill out our short intake form or call us directly at (704) 709-5688. Our team will reach out within one business day to schedule your free consultation, verify your insurance at no cost, and answer every question you have. No pressure and no commitment required for that first conversation.</p></div></div>
+    </div>
+    <div style="text-align:center;margin-top:48px;" class="rv">
+      <p class="lead" style="margin-bottom:22px;">Still have questions? We're happy to help.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <a class="btn btn-teal" onclick="gp('intake')">Get Started Free</a>
+        <a class="btn btn-outline" href="tel:+17047095688">Call (704) 709-5688</a>
+      </div>
+    </div>
+  </div></div>
+  <footer><div class="ft"><div class="ft-top"><div><div style="display:flex;align-items:center;gap:12px;cursor:pointer;" onclick="gp('home')"><div style="display:flex;flex-direction:column;gap:3px;"><div style="width:5px;height:28px;background:var(--teal);border-radius:3px;"></div><div style="width:5px;height:14px;background:var(--gold);border-radius:3px;"></div></div><div><div style="font-family:'DM Serif Display',serif;font-size:17px;color:#fff;">Harrison Bridge</div><div style="font-size:8px;font-weight:700;letter-spacing:2.5px;color:rgba(255,255,255,.28);text-transform:uppercase;margin-top:2px;">Applied Behavior Analysis</div></div></div><p class="ft-desc">ABA therapy across North Carolina.</p></div><div class="ft-col"><h5>Company</h5><ul><li><a onclick="gp('about')">About</a></li><li><a onclick="gp('services')">Services</a></li><li><a onclick="gp('resources')">Resources</a></li><li><a onclick="gp('intake')">Get Started</a></li></ul></div><div class="ft-col"><h5>Resources</h5><ul><li><a onclick="gp('resources')">Blog</a></li><li><a onclick="gp('faq')">FAQ</a></li></ul></div><div class="ft-col"><h5>Contact</h5><ul><li><a href="tel:+17047095688">(704) 709-5688</a></li><li><a href="mailto:info@harrisonbridgeaba.com">info@</a></li></ul></div></div><div class="ft-rule"></div><div class="ft-bot"><p>&copy; 2026 Harrison Bridge ABA</p></div></div></footer>
+</div>
+
+<!-- ════════ INTAKE ════════ -->
+<div class="page" id="page-intake">
+  <div class="ph bg-warm"><div class="ph-inner"><div><div class="ey">Get Started</div><h1>Let's talk about your child</h1><p>No pressure. No commitment. Just a free conversation about what's possible for your family — and how we can help.</p></div><div class="ph-img"><img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=700&q=80&fit=crop" alt="Family ready to start"/></div></div></div>
+  <div class="s bg-warm"><div class="si">
+    <div class="contact-grid">
+      <div class="rv">
+        <div class="ci">
+          <h3>Reach Us Directly</h3>
+          <p>Our team is ready to answer your questions, verify your insurance, and help you understand exactly what ABA therapy can do for your child and your family.</p>
+          <div class="ci-row"><div class="ci-ico">📞</div><div class="ci-t"><strong>Phone</strong><a href="tel:+17047095688">(704) 709-5688</a></div></div>
+          <div class="ci-row"><div class="ci-ico">📠</div><div class="ci-t"><strong>Fax</strong><a href="tel:+17047099994">(704) 709-9994</a></div></div>
+          <div class="ci-row"><div class="ci-ico">✉️</div><div class="ci-t"><strong>Email</strong><a href="mailto:info@harrisonbridgeaba.com">info@harrisonbridgeaba.com</a></div></div>
+          <div class="ci-row"><div class="ci-ico">📍</div><div class="ci-t"><strong>Service Area</strong><span>All of North Carolina</span></div></div>
+        </div>
+        <div class="ci-photo"><img src="https://images.unsplash.com/photo-1544776193-352d25ca82cd?w=600&q=80&fit=crop" alt="Therapist with child"/></div>
+        <div class="nxt">
+          <h4>What happens after you reach out?</h4>
+          <div class="nr"><div class="nr-n">1</div><div class="nr-t"><strong>We contact you</strong><span>Within 1 business day</span></div></div>
+          <div class="nr"><div class="nr-n">2</div><div class="nr-t"><strong>Free consultation</strong><span>No pressure, just answers</span></div></div>
+          <div class="nr"><div class="nr-n">3</div><div class="nr-t"><strong>Insurance verified</strong><span>At no cost to you</span></div></div>
+          <div class="nr"><div class="nr-n">4</div><div class="nr-t"><strong>Therapy begins</strong><span>On your family's timeline</span></div></div>
+        </div>
+      </div>
+
+      <!-- FORMSPREE CONNECTED -->
+      <div class="fbox rv">
+        <h3>Request a Free Consultation</h3>
+        <p class="sub">Leave us your contact info and we'll call you within 1 business day. Simple, free, no commitment required.</p>
+        <div id="formContent">
+          <form id="contactForm" action="https://formspree.io/f/xzdjwoko" method="POST">
+            <input type="hidden" name="_subject" value="New Consultation Request — Harrison Bridge ABA"/>
+            <div class="fg"><label>Your Full Name *</label><input type="text" name="name" placeholder="Your name" required/></div>
+            <div class="fg"><label>Phone Number *</label><input type="tel" name="phone" placeholder="(704) 000-0000" required/></div>
+            <div class="fg"><label>Email Address *</label><input type="email" name="email" placeholder="you@email.com" required/></div>
+            <div class="fg"><label>Child's Age (if comfortable)</label><input type="text" name="child_age" placeholder="e.g. 5 years old"/></div>
+            <div class="fg"><label>Best Time to Call</label>
+              <select name="best_time">
+                <option value="">Select...</option>
+                <option>Morning (8am–12pm)</option>
+                <option>Afternoon (12pm–5pm)</option>
+                <option>Evening (5pm–8pm)</option>
+                <option>Anytime</option>
+              </select>
+            </div>
+            <div class="fg"><label>How Did You Hear About Us?</label>
+              <select name="referral">
+                <option value="">Select...</option>
+                <option>Doctor / Pediatrician Referral</option>
+                <option>School / Teacher</option>
+                <option>Insurance Provider</option>
+                <option>Google Search</option>
+                <option>Social Media</option>
+                <option>Friend / Family</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="or-line"><span>or call us directly right now</span></div>
+            <a class="call-big" href="tel:+17047095688">
+              <svg width="17" height="17" fill="none" stroke="white" stroke-width="2.2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.58 1.25h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Call (704) 709-5688
+            </a>
+            <button type="submit" class="fsub">Submit — We'll Be in Touch Soon</button>
+          </form>
+        </div>
+        <div class="form-ok" id="formOk">
+          <h4>Thank you! We'll be in touch soon.</h4>
+          <p>Someone from our team will call you within 1 business day. Need us sooner? Call <a href="tel:+17047095688" style="color:var(--teal);font-weight:600;">(704) 709-5688</a> anytime.</p>
+        </div>
+      </div>
+    </div>
+  </div></div>
+  <footer><div class="ft"><div class="ft-top"><div><div style="display:flex;align-items:center;gap:12px;cursor:pointer;" onclick="gp('home')"><div style="display:flex;flex-direction:column;gap:3px;"><div style="width:5px;height:28px;background:var(--teal);border-radius:3px;"></div><div style="width:5px;height:14px;background:var(--gold);border-radius:3px;"></div></div><div><div style="font-family:'DM Serif Display',serif;font-size:17px;color:#fff;">Harrison Bridge</div><div style="font-size:8px;font-weight:700;letter-spacing:2.5px;color:rgba(255,255,255,.28);text-transform:uppercase;margin-top:2px;">Applied Behavior Analysis</div></div></div><p class="ft-desc">Compassionate ABA therapy across North Carolina.</p></div><div class="ft-col"><h5>Services</h5><ul><li><a onclick="gp('services')">In-Home</a></li><li><a onclick="gp('services')">School-Based</a></li><li><a onclick="gp('services')">Community</a></li></ul></div><div class="ft-col"><h5>Company</h5><ul><li><a onclick="gp('about')">About</a></li><li><a onclick="gp('locations')">Locations</a></li><li><a onclick="gp('careers')">Careers</a></li></ul></div><div class="ft-col"><h5>Contact</h5><ul><li><a href="tel:+17047095688">(704) 709-5688</a></li><li><a href="mailto:info@harrisonbridgeaba.com">info@harrisonbridgeaba.com</a></li></ul></div></div><div class="ft-rule"></div><div class="ft-bot"><p>&copy; 2026 Harrison Bridge ABA. All rights reserved.</p><div class="ft-badges"><span class="ft-badge">BCBA-Led</span><span class="ft-badge">NC Provider</span><span class="ft-badge">Insurance Accepted</span></div></div></div></footer>
+</div>
+
+<script>
+// PAGE NAV
+function gp(n){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+n).classList.add('active');
+  document.querySelectorAll('#navL a').forEach(a=>a.classList.toggle('cur',a.dataset.p===n));
+  window.scrollTo({top:0,behavior:'instant'});
+  setTimeout(()=>{
+    document.querySelectorAll('#page-'+n+' .rv').forEach(el=>{el.classList.remove('on');void el.offsetWidth;});
+    obs();
+  },60);
+}
+function tmn(){document.getElementById('mnav').classList.toggle('open');}
+document.addEventListener('click',e=>{
+  const m=document.getElementById('mnav');
+  if(m.classList.contains('open')&&!m.contains(e.target)&&!document.querySelector('.ham').contains(e.target))m.classList.remove('open');
+});
+function obs(){
+  const o=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on');});},{threshold:.08,rootMargin:'0px 0px -22px 0px'});
+  document.querySelectorAll('.page.active .rv:not(.on)').forEach(el=>o.observe(el));
+}
+obs();
+
+// FAQ
+function tf(btn){
+  const item=btn.parentElement;
+  const was=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+  if(!was)item.classList.add('open');
+}
+
+// CHATBOT
+function toggleChat(){document.getElementById('chatWin').classList.toggle('open');}
+const bots={
+  'what is aba therapy?':'ABA (Applied Behavior Analysis) is a proven, science-based therapy that helps children build communication, social, and daily living skills while reducing challenging behaviors. It\'s the gold standard treatment for Autism Spectrum Disorder.',
+  'does insurance cover aba?':'Most Medicaid plans and private insurance plans cover ABA therapy. We verify your benefits at zero cost to you — no confusion, no surprises. Call us at (704) 709-5688 or fill out our short form to get started.',
+  'how do i get started?':'Easy! Fill out our short form on the Get Started page, or call us at (704) 709-5688. We\'ll reach out within 1 business day, verify your insurance for free, and schedule your free consultation.',
+  'what ages do you serve?':'We primarily serve children ages 2–12. There\'s no hard cutoff — contact us to discuss your child\'s specific situation.',
+};
+function qr(q){
+  document.getElementById('qrs').style.display='none';
+  addMsg(q,'u');
+  setTimeout(()=>addMsg(bots[q.toLowerCase()]||'Great question! For the fastest answer, call us at (704) 709-5688 or fill out our form — we respond within 1 business day.','b'),600);
+}
+function sendMsg(){
+  const inp=document.getElementById('chatIn');
+  const txt=inp.value.trim();
+  if(!txt)return;
+  document.getElementById('qrs').style.display='none';
+  addMsg(txt,'u');inp.value='';
+  setTimeout(()=>{
+    const l=txt.toLowerCase();
+    let r='Thanks! For the fastest help, call us at (704) 709-5688 or fill out our Get Started form — we respond within 1 business day.';
+    if(l.includes('aba')||l.includes('therapy'))r=bots['what is aba therapy?'];
+    else if(l.includes('insurance')||l.includes('cover')||l.includes('medicaid'))r=bots['does insurance cover aba?'];
+    else if(l.includes('start')||l.includes('begin')||l.includes('enroll'))r=bots['how do i get started?'];
+    else if(l.includes('age')||l.includes('old')||l.includes('year'))r=bots['what ages do you serve?'];
+    addMsg(r,'b');
+  },700);
+}
+function addMsg(txt,type){
+  const m=document.getElementById('chatMsgs');
+  const d=document.createElement('div');
+  d.className='msg msg-'+type;d.textContent=txt;
+  m.appendChild(d);m.scrollTop=m.scrollHeight;
+}
+
+// FORM SUBMIT
+document.getElementById('contactForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const data=new FormData(this);
+  fetch('https://formspree.io/f/xzdjwoko',{method:'POST',body:data,headers:{'Accept':'application/json'}})
+  .then(r=>{
+    if(r.ok){
+      document.getElementById('formContent').style.display='none';
+      document.getElementById('formOk').style.display='block';
+    } else {
+      alert('Something went wrong. Please call us at (704) 709-5688.');
+    }
+  })
+  .catch(()=>alert('Something went wrong. Please call us at (704) 709-5688.'));
+});
+</script>
+</body>
+</html>
